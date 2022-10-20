@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#what-is-the-game-engine" class="md-skip">
           Skip to content
         </a>
       
@@ -230,15 +230,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    维基百科
+  <a href="#wikipedia" class="md-nav__link">
+    Wikipedia
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    王希老师
+  <a href="#drwang" class="md-nav__link">
+    Dr.Wang
   </a>
   
 </li>
@@ -285,15 +285,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    维基百科
+  <a href="#wikipedia" class="md-nav__link">
+    Wikipedia
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    王希老师
+  <a href="#drwang" class="md-nav__link">
+    Dr.Wang
   </a>
   
 </li>
@@ -320,48 +320,49 @@
                   
 
 
-<h1 id="_1">什么是游戏引擎</h1>
-<h2 id="_2">维基百科</h2>
-<p>游戏引擎是指一些已编写好的可编辑电脑游戏系统或者一些交互式实时图像应用程序的核心组件。</p>
-<p>这些系统为游戏设计者提供编写游戏所需的各种工具，目的在于让游戏设计者能够快速地做出游戏，而不用从零开始。</p>
-<h2 id="_3">王希老师</h2>
+<h1 id="what-is-the-game-engine">What is the game engine</h1>
+<h2 id="wikipedia">Wikipedia</h2>
+<p>A game engine is a software framework primarily designed for the development of video games, and generally includes relevant libraries and support programs. The "engine" terminology is similar to the term "software engine" used in the software industry.</p>
+<p>Game engine can also refer to the development software utilizing this framework, typically offering a suite of tools and features for developing games.</p>
+<p>Developers can use game engines to construct games for video game consoles and other types of computers. The core functionality typically provided by a game engine may include a rendering engine ("renderer") for 2D or 3D graphics, a physics engine or collision detection (and collision response), sound, scripting, animation, artificial intelligence, networking, streaming, memory management, threading, localization support, scene graph, and video support for cinematics. Game engine implementers often economize on the process of game development by reusing/adapting, in large part, the same game engine to produce different games or to aid in porting games to multiple platforms.</p>
+<h2 id="drwang">Dr.Wang</h2>
 <ul>
-<li>黑客帝国的技术基石；</li>
-<li>生产创意的工具；</li>
-<li>复杂性系统的艺术。</li>
+<li>The technological cornerstone of the <em>Matrix</em>;</li>
+<li>Tools to produce ideas;</li>
+<li>The art of complex systems.</li>
 </ul>
 <h2 id="zong">Zong</h2>
-<p>从客观来上说，游戏引擎是一堆游戏底层所需的模块的集合，但是如果你将其当作一个复杂的机器或者世界，那它就是人类艺术的集大成作。</p>
+<p>Objectively speaking, a game engine is a collection of modules that are needed at the bottom of games. But if you think it as a complex machine or a real world, that will be a greate artwork.</p>
 <blockquote>
-<p>尊重它，欣赏它，理解它。</p>
+<p>Respect, appreciate and understand it.</p>
 </blockquote>
-<p>游戏引擎会为你提供一套完整的开发工具链，以供你开发各种各样的游戏，甚至是影视。</p>
-<h1 id="_4">怎么学习游戏引擎</h1>
-<p>游戏引擎内含了现有的大部分科学知识，那些东西需要你花几乎一辈子去钻研才能真正理解。</p>
-<p><img alt="游戏引擎理论学习书籍" src="../IntroduceResources/GameEngineLearnBooks.jpg" /></p>
-<p>所以在这里，我更多的是为你构建出游戏引擎的理论框架，剩下的需要你自己以后慢慢填补。</p>
-<h1 id="_5">游戏引擎框架</h1>
-<p><img alt="游戏引擎分层" src="../IntroduceResources/GameEngineLayers.png" /></p>
-<p>从上往下依次是工具层、功能层、资源层、平台层和核心层，再加上贯穿始终的第三方库。</p>
-<p>在这里我将平台层放在核心层之上，意在指通过抽象 <strong>API</strong> 将核心层的代码在平台层中实现（<strong>override</strong>）和完善。</p>
-<h2 id="_6">工具层</h2>
-<p>为开发者提供编辑器工具，比如蓝图。</p>
-<h2 id="_7">功能层</h2>
-<p>主要是通过底层的核心模块实现引擎开发所需的主要功能，并按序 <strong>Tick</strong> 每一个功能模块。</p>
-<p><img alt="Tick 轮盘" src="../IntroduceResources/GameEngineTick.jpg" /></p>
-<p>多线程间的调度与管理也属于这一层。</p>
-<h2 id="_8">资源层</h2>
-<p>主要是要记录资源内部和资源间的引用关系以及管理资产的生命周期。</p>
-<p>举个例子，<strong>Assimp</strong> 引入模型时会构建类似以下的存储结构。</p>
-<p><img alt="Assimp 引入模型" src="../IntroduceResources/AssimpLoadModel.png" /></p>
-<h2 id="_9">平台层</h2>
-<p>主要是根据不同的游戏平台以及渲染接口异化核心层引出的 <strong>API</strong> （重载虚函数以实现多态）。</p>
-<h2 id="_10">核心层</h2>
-<p>内含数学库，事件监听，日志等等核心功能。</p>
-<p>数据结构和内存管理也属于该层，通过优化底层的数据存放以减少内存的空洞。</p>
-<h1 id="_11">资料来源</h1>
+<p>The game engine will provide you with a complete development tools chain for all kinds of games, even movies.</p>
+<h1 id="how-to-learn-game-engine">How to learn game engine</h1>
+<p>The game engine contains most of the existing science knowledge, which will take you almost a whole lifetime to understand deeply.</p>
+<p><img alt="the game engine theoretical study books" src="../IntroduceResources/GameEngineLearnBooks.jpg" /></p>
+<p>So most time, I want to talk about building the theoretical framework of the game engine with you. The rest will be filled in the future by yourself.</p>
+<h1 id="game-engine-framework">Game engine Framework</h1>
+<p><img alt="game engine stratified" src="../IntroduceResources/GameEngineLayers.png" /></p>
+<p>From top to bottom, they are the tools layer, the function layer, the resource layer, the platform layer and the core layer, with third-party libraries.</p>
+<p>I place the platform layer above the core layer, which means to abstract <strong>API</strong> from core codes to the platform layer and override them.</p>
+<h2 id="tools-layer">Tools layer</h2>
+<p>Provide developers with editor tools, such as blueprints.</p>
+<h2 id="function-layer">Function layer</h2>
+<p>It is mainly through the underlying core modules to achieve the main functions required by engine development, and <strong>Tick</strong> each function module in order.</p>
+<p><img alt="Tick roulette" src="../IntroduceResources/GameEngineTick.jpg" /></p>
+<p>Schedule and management among multithreads also belong to this layer.</p>
+<h2 id="resource-layer">Resource layer</h2>
+<p>It is used to record the reference relationships within or between resources and also manage the asset lifecycle.</p>
+<p>For example, when <strong>Assimp</strong> load models, a storage structure like the following will be built.</p>
+<p><img alt="Assimp load models" src="../IntroduceResources/AssimpLoadModel.png" /></p>
+<h2 id="platform-layer">Platform layer</h2>
+<p>It will override the <strong>API</strong> from the core layer by different methods which depend on game platforms and rendering interfaces.</p>
+<h2 id="core-layer">Core layer</h2>
+<p>Includes math library, event monitoring, logging and other core functions.</p>
+<p>Data structure and memory management also belong to this layer, by optimizing the underlying data storage to reduce memory holes.</p>
+<h1 id="data-sources">Data Sources</h1>
 <ol>
-<li><a href="https://learnopengl-cn.github.io/03%20Model%20Loading/01%20Assimp/"><strong>Assimp</strong> 引入模型介绍。</a></li>
+<li><a href="https://learnopengl-cn.github.io/03%20Model%20Loading/01%20Assimp/">Introduction of <strong>Assimp</strong> loading models.</a></li>
 </ol>
 
 
