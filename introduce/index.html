@@ -243,6 +243,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#zong" class="md-nav__link">
+    Zong
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -291,6 +298,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#zong" class="md-nav__link">
+    Zong
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -315,6 +329,7 @@
 <li>创意的生产力工具；</li>
 <li>复杂性系统的艺术。</li>
 </ul>
+<h2 id="zong">Zong</h2>
 <p>从客观来上说，游戏引擎是一堆游戏底层所需的核心模块的集合，但是如果你将其当作一个复杂的机器或者世界，那他就是人类艺术的集大成作。</p>
 <blockquote>
 <p>尊重它，欣赏它，理解它。</p>
@@ -322,9 +337,31 @@
 <p>游戏引擎会为你提供一套完整的开发工具链，以供你开发各种各样的游戏，甚至是影视！</p>
 <h1 id="_4">怎么学习游戏引擎</h1>
 <p>游戏引擎内含了大部分现有的科学知识，那些东西需要你花一辈子去钻研才能真正理解。</p>
+<p><img alt="游戏引擎理论学习书籍" src="../IntroduceResources/GameEngineLearnBooks.jpg" /></p>
 <p>所以在这里，我更多的是为你构建出游戏引擎的框架，剩下的需要你自己慢慢填补。</p>
 <h1 id="_5">游戏引擎框架</h1>
-<h1 id="_6">资料来源</h1>
+<p><img alt="游戏引擎分层" src="../IntroduceResources/GameEngineLayers.png" /></p>
+<p>从上往下依次是工具层、功能层、资源层、平台层、核心层以及贯穿始终的第三方库。</p>
+<p>根据 <a href="https://github.com/zong4/VitarEngine"><strong>VitarEngine</strong></a> 的代码，我将平台层放在核心层之上，意在指通过抽象 <strong>API</strong> 将核心层的代码在平台层中实现（<strong>override</strong>）和完善。</p>
+<h2 id="_6">资源层</h2>
+<p>主要是要记录资源内部和资源间的引用关系以及管理资产的生命周期。</p>
+<p>举个例子，<strong>Assimp</strong> 引入模型时会构建类似以下的存储结构。</p>
+<p><img alt="Assimp 引入模型" src="../IntroduceResources/AssimpLoadModel.png" /></p>
+<h2 id="_7">功能层</h2>
+<p>主要是通过底层的核心模块实现引擎开发所需的主要功能，并按序 <strong>Tick</strong> 每一个功能模块。</p>
+<p><img alt="Tick 轮盘" src="../IntroduceResources/GameEngineTick.jpg" /></p>
+<p>多线程间的调度与管理也属于这一层。</p>
+<h2 id="_8">平台层</h2>
+<p>主要是根据不同的游戏平台以及渲染接口异化核心层引出的 <strong>API</strong> （重载虚函数以实现多态）。</p>
+<h2 id="_9">核心层</h2>
+<p>内含数学库，事件监听，日志等等核心功能。</p>
+<p>数据结构和内存管理也属于这层，通过优化底层的数据存放以减少内存的空洞。</p>
+<h2 id="_10">工具层</h2>
+<p>为开发者提供编辑器工具，比如蓝图。</p>
+<h1 id="_11">资料来源</h1>
+<ol>
+<li><a href="https://learnopengl-cn.github.io/03%20Model%20Loading/01%20Assimp/"><strong>Assimp</strong> 引入模型介绍。</a></li>
+</ol>
 
 
 
