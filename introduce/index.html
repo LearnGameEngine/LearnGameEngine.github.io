@@ -39,8 +39,38 @@
                             <li class="navitem active">
                                 <a href="./" class="nav-link">介绍</a>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">核心 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Core/EventsSystem/" class="dropdown-item">事件系统</a>
+</li>
+                                    
+<li>
+    <a href="../Core/LayersSystem/" class="dropdown-item">层级系统</a>
+</li>
+                                    
+<li>
+    <a href="../Core/InputPolling/" class="dropdown-item">输入池</a>
+</li>
+                                    
+<li>
+    <a href="../Core/Math/" class="dropdown-item">数学</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">功能 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Function/ImGuiLayer/" class="dropdown-item">ImGui 层</a>
+</li>
+                                </ul>
+                            </li>
                             <li class="navitem">
-                                <a href="../EventSystem/" class="nav-link">事件系统</a>
+                                <a href=".." class="nav-link">资源</a>
                             </li>
                         </ul>
 
@@ -56,7 +86,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../EventSystem/" class="nav-link">
+                                <a rel="next" href="../Core/EventsSystem/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -146,7 +176,7 @@
 <p>Developers can use game engines to construct games for video game consoles and other types of computers. The core functionality typically provided by a game engine may include a rendering engine ("renderer") for 2D or 3D graphics, a physics engine or collision detection (and collision response), sound, scripting, animation, artificial intelligence, networking, streaming, memory management, threading, localization support, scene graph, and video support for cinematics. Game engine implementers often economize on the process of game development by reusing/adapting, in large part, the same game engine to produce different games or to aid in porting games to multiple platforms.</p>
 <h2 id="drwang">Dr.Wang</h2>
 <ul>
-<li>The technological cornerstone of the <em>Matrix</em>;</li>
+<li>The technological cornerstone of the Matrix;</li>
 <li>Tools to produce ideas;</li>
 <li>The art of complex systems.</li>
 </ul>
@@ -158,17 +188,17 @@
 <p>The game engine will provide you with a complete development tools chain for all kinds of games, even movies.</p>
 <h1 id="how-to-learn-game-engine">How to learn game engine</h1>
 <p>The game engine contains most of the existing science knowledge, which will take you almost a whole lifetime to understand deeply.</p>
-<p><img alt="the game engine theoretical study books" src="../IntroduceResources/GameEngineLearnBooks.jpg" /></p>
+<p><img alt="Game Engine Books" src="../IntroduceResources/GameEngineLearnBooks.jpg" /></p>
 <p>So most time, I want to talk about building the theoretical framework of the game engine with you. The rest will be filled in the future by yourself.</p>
 <h1 id="game-engine-framework">Game engine Framework</h1>
-<p><img alt="game engine stratified" src="../IntroduceResources/GameEngineLayers.png" /></p>
+<p><img alt="Game Engine Layers" src="../IntroduceResources/GameEngineLayers.png" /></p>
 <p>From top to bottom, they are the tools layer, the function layer, the resource layer, the platform layer and the core layer, with third-party libraries.</p>
 <p>I place the platform layer above the core layer, which means to abstract <strong>API</strong> from core codes to the platform layer and override them.</p>
 <h2 id="tools-layer">Tools layer</h2>
 <p>Provide developers with editor tools, such as blueprints.</p>
 <h2 id="function-layer">Function layer</h2>
 <p>It is mainly through the underlying core modules to achieve the main functions required by engine development, and <strong>Tick</strong> each function module in order.</p>
-<p><img alt="Tick roulette" src="../IntroduceResources/GameEngineTick.jpg" /></p>
+<p><img alt="Tick" src="../IntroduceResources/GameEngineTick.jpg" /></p>
 <p>Schedule and management among multithreads also belong to this layer.</p>
 <h2 id="resource-layer">Resource layer</h2>
 <p>It is used to record the reference relationships within or between resources and also manage the asset lifecycle.</p>
@@ -182,7 +212,8 @@
 <h1 id="vitar-engine">Vitar Engine</h1>
 <p>In <strong>Vitar Engine</strong>, I haven't rigorously specified the directory structure as this hierarchy, but it will be organized in the near future.</p>
 <p>You can refer <a href="https://github.com/BoomingTech/Piccolo"><strong>Piccolo Engine</strong></a>.</p>
-<p><img alt="Game engine file structure" src="../IntroduceResources/GameEngineDir.jpg" /></p>
+<p><img alt="Game Engine directories" src="../IntroduceResources/GameEngineDir.jpg" /></p>
+<p>However, in this document, I will try to classify articles in the same structure as above. There will be no tool layer, as it is mainly about overloading and assembling the functionality layer, while the platform layer will be introduced along with the core layer, so no new directories will be created for it.</p>
 <h1 id="data-sources">Data Sources</h1>
 <ol>
 <li><a href="https://learnopengl-cn.github.io/03%20Model%20Loading/01%20Assimp/">Introduction of <strong>Assimp</strong> loading models.</a></li>

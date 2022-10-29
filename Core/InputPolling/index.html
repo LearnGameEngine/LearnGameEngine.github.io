@@ -4,26 +4,26 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>游戏引擎学习</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>输入池 - 游戏引擎学习</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">游戏引擎学习</a>
+                <a class="navbar-brand" href="../..">游戏引擎学习</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -33,30 +33,30 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem active">
-                                <a href="." class="nav-link">家</a>
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">家</a>
                             </li>
                             <li class="navitem">
-                                <a href="Introduce/" class="nav-link">介绍</a>
+                                <a href="../../Introduce/" class="nav-link">介绍</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">核心 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="Core/EventsSystem/" class="dropdown-item">事件系统</a>
+    <a href="../EventsSystem/" class="dropdown-item">事件系统</a>
 </li>
                                     
 <li>
-    <a href="Core/LayersSystem/" class="dropdown-item">层级系统</a>
+    <a href="../LayersSystem/" class="dropdown-item">层级系统</a>
 </li>
                                     
 <li>
-    <a href="Core/InputPolling/" class="dropdown-item">输入池</a>
+    <a href="./" class="dropdown-item active">输入池</a>
 </li>
                                     
 <li>
-    <a href="Core/Math/" class="dropdown-item">数学</a>
+    <a href="../Math/" class="dropdown-item">数学</a>
 </li>
                                 </ul>
                             </li>
@@ -65,12 +65,12 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="Function/ImGuiLayer/" class="dropdown-item">ImGui 层</a>
+    <a href="../../Function/ImGuiLayer/" class="dropdown-item">ImGui 层</a>
 </li>
                                 </ul>
                             </li>
                             <li class="navitem">
-                                <a href="." class="nav-link">资源</a>
+                                <a href="../.." class="nav-link">资源</a>
                             </li>
                         </ul>
 
@@ -81,12 +81,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
+                                <a rel="prev" href="../LayersSystem/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="Introduce/" class="nav-link">
+                                <a rel="next" href="../Math/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -108,21 +108,34 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#preceding-words" class="nav-link">Preceding words</a>
+            <li class="nav-item" data-level="1"><a href="#structure" class="nav-link">Structure</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#advantages" class="nav-link">Advantages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#input" class="nav-link">Input</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#windowsinput" class="nav-link">WindowsInput</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#welcome-to-the-world-of-game-engines" class="nav-link">Welcome to the world of game engines</a>
+            <li class="nav-item" data-level="1"><a href="#supplement-knowledge" class="nav-link">Supplement knowledge</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#why-do-you-study" class="nav-link">Why do you study</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#what-will-you-learn" class="nav-link">What will you learn</a>
+            <li class="nav-item" data-level="2"><a href="#static" class="nav-link">static</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#data-sources" class="nav-link">Data Sources</a>
+              <ul class="nav flex-column">
               </ul>
             </li>
         </ul>
@@ -130,21 +143,63 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="preceding-words">Preceding words</h1>
-<p>As a junior student, I attempts to write down this document. On the one hand, to summarize the recent experience of learning game engine, also, it will be a part of my graduation project, on the other hand, I want to point out the general direction for future visitors.</p>
-<p>Hopefully, more and more people are willing to learn the game engine. Understand and improve it, to realize the Matrix scenes sooner.</p>
-<p>If you want to study with chinese, click <a href="https://learngameengine-cn.github.io/">here</a>.</p>
-<p>If you have any questions when reading, please submit <strong>issue</strong> in the <a href="https://github.com/LearnGameEngine/LearnGameEngine.github.io">Github address</a> or send email to <strong>2481814748@qq.com</strong>. I will be very grateful for your valuable advices.</p>
-<h1 id="welcome-to-the-world-of-game-engines">Welcome to the world of game engines</h1>
-<h2 id="why-do-you-study">Why do you study</h2>
-<blockquote>
-<p>Game engine is the jewel of the game's crown.</p>
-</blockquote>
-<p>The development of a game engine involves a wide range of knowledge. And even if you do not work this in the future, it's still valuable to learn.</p>
-<p>Through it, you will know how humans compress the world we live in into the engine.</p>
-<h2 id="what-will-you-learn">What will you learn</h2>
-<p>I will use informations from <a href="https://games104.boomingtech.com/sc/"><strong>GAMES104</strong></a> and other papers, to provide enough theoretical knowledges.</p>
-<p>Also attach my <strong>VitarEngine</strong>, which developed after learning courses of <a href="https://www.youtube.com/c/TheChernoProject/featured"><strong>Cherno</strong></a> after development. Please also support <a href="https://github.com/TheCherno/Hazel"><strong>HazelEngine</strong></a>.</p></div>
+<h1 id="structure">Structure</h1>
+<p><img alt="UML" src="../InputPollingResources/Structure.png" /></p>
+<h2 id="advantages">Advantages</h2>
+<ol>
+<li>Functions are overloaded on different platforms and then called by standard functions.</li>
+</ol>
+<h2 id="input">Input</h2>
+<p><a href="https://github.com/TheCherno/Hazel/commit/e1bb18d2c8e9c514d959c2eeb55d24af00d169ff#diff-be85eaa45142337711de6464b454b48df255e8b9aa345a3edf5c37c27b31bb76"><strong>Input</strong></a> : As a base class, it provides a public standard function interface which is easy to call and an implementation function interface which will be overloaded.</p>
+<pre><code class="language-c++">class HAZEL_API Input
+{
+public:
+    inline static bool IsKeyPressed(int keycode) { return s_Instance-&gt;IsKeyPressedImpl(keycode); }
+
+    inline static bool IsMouseButtonPressed(int button) { return s_Instance-&gt;IsMouseButtonPressedImpl(button); }
+    inline static std::pair&lt;float, float&gt; GetMousePosition() { return s_Instance-&gt;GetMousePositionImpl(); }
+    inline static float GetMouseX() { return s_Instance-&gt;GetMouseXImpl(); }
+    inline static float GetMouseY() { return s_Instance-&gt;GetMouseYImpl(); }
+protected:
+    virtual bool IsKeyPressedImpl(int keycode) = 0;
+
+    virtual bool IsMouseButtonPressedImpl(int button) = 0;
+    virtual std::pair&lt;float, float&gt; GetMousePositionImpl() = 0;
+    virtual float GetMouseXImpl() = 0;
+    virtual float GetMouseYImpl() = 0;
+private:
+    static Input* s_Instance;
+};
+</code></pre>
+<h2 id="windowsinput">WindowsInput</h2>
+<p><a href="https://github.com/TheCherno/Hazel/commit/e1bb18d2c8e9c514d959c2eeb55d24af00d169ff#diff-be85eaa45142337711de6464b454b48df255e8b9aa345a3edf5c37c27b31bb76"><strong>WindowsInput</strong></a> : The implementation function is overloaded with <strong>GLFW</strong>.</p>
+<pre><code class="language-c++">class HAZEL_API Input
+{
+public:
+    inline static bool IsKeyPressed(int keycode) { return s_Instance-&gt;IsKeyPressedImpl(keycode); }
+
+    inline static bool IsMouseButtonPressed(int button) { return s_Instance-&gt;IsMouseButtonPressedImpl(button); }
+    inline static std::pair&lt;float, float&gt; GetMousePosition() { return s_Instance-&gt;GetMousePositionImpl(); }
+    inline static float GetMouseX() { return s_Instance-&gt;GetMouseXImpl(); }
+    inline static float GetMouseY() { return s_Instance-&gt;GetMouseYImpl(); }
+protected:
+    virtual bool IsKeyPressedImpl(int keycode) = 0;
+
+    virtual bool IsMouseButtonPressedImpl(int button) = 0;
+    virtual std::pair&lt;float, float&gt; GetMousePositionImpl() = 0;
+    virtual float GetMouseXImpl() = 0;
+    virtual float GetMouseYImpl() = 0;
+private:
+    static Input* s_Instance;
+};
+</code></pre>
+<h1 id="supplement-knowledge">Supplement knowledge</h1>
+<h2 id="static">static</h2>
+<p>Objects that are modified by <strong>static</strong> in their parent class do not will change their access after inheriting.</p>
+<h1 id="data-sources">Data Sources</h1>
+<ol>
+<li><a href="https://blog.csdn.net/alexhu2010q/article/details/107688039?spm=1001.2101.3001.6650.12&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-12-107688039-blog-107132670.pc_relevant_3mothn_strategy_and_data_recovery&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-12-107688039-blog-107132670.pc_relevant_3mothn_strategy_and_data_recovery&amp;utm_relevant_index=17"><strong>static</strong>。</a></li>
+</ol></div>
             </div>
         </div>
 
@@ -153,11 +208,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -222,8 +277,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.4.1
-Build Date UTC : 2022-10-29 11:38:05.200912+00:00
--->

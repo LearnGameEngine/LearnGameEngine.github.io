@@ -7,15 +7,15 @@
         
         
         
-        <link rel="shortcut icon" href="/img/favicon.ico">
-        <title>游戏引擎学习</title>
-        <link href="/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/css/font-awesome.min.css" rel="stylesheet">
-        <link href="/css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>层级系统 - 游戏引擎学习</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-        <script src="/js/jquery-1.10.2.min.js" defer></script>
-        <script src="/js/bootstrap.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="/.">游戏引擎学习</a>
+                <a class="navbar-brand" href="../..">游戏引擎学习</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,29 +34,29 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="/." class="nav-link">家</a>
+                                <a href="../.." class="nav-link">家</a>
                             </li>
                             <li class="navitem">
-                                <a href="/Introduce/" class="nav-link">介绍</a>
+                                <a href="../../Introduce/" class="nav-link">介绍</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">核心 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="/Core/EventsSystem/" class="dropdown-item">事件系统</a>
+    <a href="../EventsSystem/" class="dropdown-item">事件系统</a>
 </li>
                                     
 <li>
-    <a href="/Core/LayersSystem/" class="dropdown-item">层级系统</a>
+    <a href="./" class="dropdown-item active">层级系统</a>
 </li>
                                     
 <li>
-    <a href="/Core/InputPolling/" class="dropdown-item">输入池</a>
+    <a href="../InputPolling/" class="dropdown-item">输入池</a>
 </li>
                                     
 <li>
-    <a href="/Core/Math/" class="dropdown-item">数学</a>
+    <a href="../Math/" class="dropdown-item">数学</a>
 </li>
                                 </ul>
                             </li>
@@ -65,12 +65,12 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="/Function/ImGuiLayer/" class="dropdown-item">ImGui 层</a>
+    <a href="../../Function/ImGuiLayer/" class="dropdown-item">ImGui 层</a>
 </li>
                                 </ul>
                             </li>
                             <li class="navitem">
-                                <a href="/." class="nav-link">资源</a>
+                                <a href="../.." class="nav-link">资源</a>
                             </li>
                         </ul>
 
@@ -80,6 +80,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../EventsSystem/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../InputPolling/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -87,15 +97,90 @@
 
         <div class="container">
             <div class="row">
-
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-      </div>
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
     </div>
 
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#usage" class="nav-link">Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#structure" class="nav-link">Structure</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#advantages" class="nav-link">Advantages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#layer" class="nav-link">Layer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#layerstack" class="nav-link">LayerStack</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
 
+<h1 id="usage">Usage</h1>
+<p>Different contents are assigned to different layers and then output them to the screen in a specific rendering order.</p>
+<h1 id="structure">Structure</h1>
+<p><img alt="UML" src="../LayersSystemResources/Structure.png" /></p>
+<h2 id="advantages">Advantages</h2>
+<ol>
+<li>Achieve hierarchical management.</li>
+</ol>
+<h2 id="layer">Layer</h2>
+<p><a href="https://github.com/TheCherno/Hazel/commit/5bd809312a266c23d13d84dcd08a833a526aa264#diff-ae5265b2290637646540d0f77bab90e322ec6ca9fa4dc55eec7bee28afcff835"><strong>Layer</strong></a> : As a base class, it contains the basic functionality required by the layer (events listening and contents updating).</p>
+<pre><code class="language-c++">class HAZEL_API Layer
+{
+public:
+    Layer(const std::string&amp; name = &quot;Layer&quot;);
+    virtual ~Layer();
+
+    virtual void OnAttach() {}
+    virtual void OnDetach() {}
+    virtual void OnUpdate() {}
+    virtual void OnEvent(Event&amp; event) {}
+
+    inline const std::string&amp; GetName() const { return m_DebugName; }
+protected:
+    std::string m_DebugName;
+};
+</code></pre>
+<h2 id="layerstack">LayerStack</h2>
+<p><a href="https://github.com/TheCherno/Hazel/commit/5bd809312a266c23d13d84dcd08a833a526aa264#diff-ae5265b2290637646540d0f77bab90e322ec6ca9fa4dc55eec7bee28afcff835"><strong>LayerStack</strong></a> : Storage and manage all layers.</p>
+<pre><code class="language-c++">class HAZEL_API LayerStack
+{
+public:
+    LayerStack();
+    ~LayerStack();
+
+    void PushLayer(Layer* layer);
+    void PushOverlay(Layer* overlay);
+    void PopLayer(Layer* layer);
+    void PopOverlay(Layer* overlay);
+
+    std::vector&lt;Layer*&gt;::iterator begin() { return m_Layers.begin(); }
+    std::vector&lt;Layer*&gt;::iterator end() { return m_Layers.end(); }
+private:
+    std::vector&lt;Layer*&gt; m_Layers;
+    std::vector&lt;Layer*&gt;::iterator m_LayerInsert;
+};
+</code></pre>
+<p>The topmost layer receives events first and is rendered at the last (it will overwrite the other layers).</p></div>
             </div>
         </div>
 
@@ -104,11 +189,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "/",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="/js/base.js" defer></script>
-        <script src="/search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
